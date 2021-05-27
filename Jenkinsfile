@@ -4,6 +4,9 @@ pipeline{
         agent{
             label 'JAVA'
         }
+        environment {
+            COMPONENT = "${COMPONENT}"
+        }
         stages{
             stage('Downloading dependencies'){
                 steps{
@@ -22,7 +25,8 @@ pipeline{
             stage('Upload Artifacts'){
                 steps{
                     script{
-                        nexus
+                        upload = new nexus()
+                        upload.nexus ("${COMPONENT}")
                       }
                     }
                 }
