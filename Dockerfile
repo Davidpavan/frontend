@@ -1,3 +1,4 @@
 FROM    node
-COPY    . .
+RUN     mkdir /app
+COPY    . /app
 RUN     npm install
