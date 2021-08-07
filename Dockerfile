@@ -1,4 +1,5 @@
-FROM    bitnami/node:16.6.1-debian-10-r4
+FROM    ubuntu
+RUN     mkdir /app
 WORKDIR /app
 COPY    . /app
 RUN     npm install
