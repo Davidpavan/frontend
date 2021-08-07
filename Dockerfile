@@ -1,5 +1,6 @@
 FROM    ubuntu
-RUN     apt update -y && apt install npm -y
+RUN     apt update -y
+RUN     apt install npm -y
 RUN     mkdir /app
 WORKDIR /app
 COPY    . /app
