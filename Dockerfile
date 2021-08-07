@@ -2,7 +2,7 @@ FROM    node:stretch-slim
 RUN     mkdir /app
 WORKDIR /app
 COPY    . .
-RUN     npm install
+RUN     ["bash", "-c", "npm install"]
 
 FROM    nginx
 RUN     mkdir -p /var/www/html
