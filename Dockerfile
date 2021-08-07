@@ -4,5 +4,5 @@ CMD     ["nginx", "-g", "daemon off;"]
 RUN     apt install npm
 COPY    . /var/www/html
 WORKDIR /frontend
-RUN     npm install && npm run build
+RUN     npm install -y && npm run build
 
