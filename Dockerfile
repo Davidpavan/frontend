@@ -1,4 +1,4 @@
-FROM    alpine3.14
+FROM    node
 RUN     apt update -y
 COPY    . .
 RUN     npm install
