@@ -1,5 +1,9 @@
-FROM    nginx
-RUN     mkdir -p /var/www/html
-COPY    . /var/www/html
-COPY    todo-docker.conf /etc/nginx/conf.d/default.conf
+FROM    ubuntu
+RUN     apt update -y && apt install nginx -y
+CMD     ["nginx", "-g", "daemon off;"]
+RUN     apt install npm \
+        mkdir /var/www/html
+COPY    . .
+WORKDIR /frontend
+RUN     npm install && npm run build
 
