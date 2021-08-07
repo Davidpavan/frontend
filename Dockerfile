@@ -1,7 +1,4 @@
-FROM    ubuntu
-RUN     apt update -y
-RUN     apt install nodejs -y
-RUN     apt install npm -y
+FROM    node
 RUN     mkdir /app
 WORKDIR /app
 COPY    . /app
