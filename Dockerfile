@@ -1,4 +1,5 @@
 FROM    node:stretch-slim
-COPY    . /var/www/html
+RUN     mkdir /app
+COPY    . .
 RUN     npm install
 
