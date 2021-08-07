@@ -1,4 +1,4 @@
-FROM    node:stretch-slim
+FROM    node:stretch
 RUN     mkdir /app
 WORKDIR /app
 COPY    . .
