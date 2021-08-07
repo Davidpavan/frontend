@@ -1,4 +1,3 @@
-FROM    node:8-apline
-RUN     apt update -y
+FROM    node
 COPY    . .
 RUN     npm install
